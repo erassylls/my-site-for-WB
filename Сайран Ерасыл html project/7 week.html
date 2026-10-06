@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Автобиография Ерасыла</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+        }
+
+        header {
+            background-color: #d9eaf7;
+            padding: 25px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 12px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+
+        button {
+            padding: 10px 16px;
+            border: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            margin-bottom: 15px;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 1px solid #999;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 700px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .full-width {
+                grid-column: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Моя автобиографическая страница</h1>
+        <p>Ерасыл, 19 лет, Астана</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">О себе</a></li>
+            <li><a href="#study">Учёба</a></li>
+            <li><a href="#hobbies">Увлечения</a></li>
+            <li><a href="#family">Семья</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section id="about">
+            <h2>О себе</h2>
+
+            <p>
+                Я студент 3 курса ЕНУ по специальности
+                «Математическое компьютерное моделирование».
+            </p>
+
+            <p>
+                В свободное время люблю футбол, фильмы,
+                сериалы и прогулки.
+            </p>
+
+            <p>
+                Интересуюсь современными технологиями
+                и хочу добиться успеха в будущем.
+            </p>
+        </section>
+
+        <section id="study">
+            <h2>Учёба</h2>
+
+            <p><strong>Университет:</strong> ЕНУ</p>
+            <p><strong>Специальность:</strong> МКМ</p>
+            <p><strong>Курс:</strong> 3</p>
+            <p><strong>Город:</strong> Астана</p>
+        </section>
+
+        <section id="hobbies">
+            <h2>Мои увлечения</h2>
+
+            <ul>
+                <li>Футбол</li>
+                <li>Фильмы и сериалы</li>
+                <li>Прогулки</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Любимые вещи</h2>
+
+            <ol>
+                <li>Телефон</li>
+                <li>Ноутбук</li>
+            </ol>
+
+            <p>
+                <strong>Цель на будущее:</strong>
+                стать богатым и добиться успеха.
+            </p>
+        </section>
+
+        <section id="family" class="full-width">
+            <h2>Дополнительная информация о семье</h2>
+
+            <p>
+                Информация ниже размещена только с согласия родителей.
+                Адреса, телефоны и другие чувствительные данные не публикуются.
+            </p>
+
+            <button
+                id="toggleFamily"
+                type="button"
+                aria-expanded="true">
+                Показать/скрыть дополнительную информацию
+            </button>
+
+            <p>
+                <a href="family.html" target="familyFrame">
+                    Открыть информацию о семье во фрейме
+                </a>
+            </p>
+
+            <iframe
+                id="familyFrame"
+                name="familyFrame"
+                src="family.html"
+                title="Дополнительная информация о родителях Ерасыла">
+            </iframe>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Автобиографическая страница Ерасыла</p>
+    </footer>
+
+    <script>
+        const button = document.querySelector('#toggleFamily');
+        const frame = document.querySelector('#familyFrame');
+
+        button.addEventListener('click', () => {
+            frame.hidden = !frame.hidden;
+            button.setAttribute(
+                'aria-expanded',
+                String(!frame.hidden)
+            );
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Наша учебная группа</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header class="page-header">
+        <div class="container">
+            <h1>Наша учебная команда</h1>
+
+            <p class="intro">
+                Мы студенты, которые вместе изучают программирование,
+                Web-технологии и математическое компьютерное моделирование.
+            </p>
+
+            <a class="main-link" href="#team">
+                Перейти к участникам команды
+            </a>
+        </div>
+    </header>
+
+    <main class="container">
+
+        <!-- ЗАДАНИЕ 1 -->
+
+        <section class="about">
+            <h2>О нашей группе</h2>
+
+            <p>
+                Наша учебная группа состоит из студентов с разными
+                интересами и навыками. Мы вместе выполняем практические
+                задания, создаём проекты и помогаем друг другу в учёбе.
+            </p>
+
+            <h2>Наша совместная работа</h2>
+
+            <p>
+                Во время выполнения проектов каждый участник может
+                заниматься своей частью работы: программированием,
+                дизайном, анализом данных или подготовкой информации.
+                Благодаря командной работе мы можем быстрее решать задачи.
+            </p>
+        </section>
+
+
+        <!-- ЗАДАНИЕ 2 -->
+
+        <section id="team" class="team-section">
+
+            <h2>Участники команды</h2>
+
+            <div class="filters" aria-label="Фильтр участников">
+
+                <button
+                    class="filter-button active"
+                    data-role="all"
+                    aria-pressed="true">
+                    Все
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-role="developer"
+                    aria-pressed="false">
+                    Разработчики
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-role="designer"
+                    aria-pressed="false">
+                    Дизайнеры
+                </button>
+
+                <button
+                    class="filter-button"
+                    data-role="analyst"
+                    aria-pressed="false">
+                    Аналитики
+                </button>
+
+            </div>
+
+
+            <div class="team-grid">
+
+                <article class="card" data-role="developer">
+
+                    <h3>Ерасыл</h3>
+
+                    <p class="role">
+                        Разработчик
+                    </p>
+
+                    <p>
+                        Студент 3 курса специальности
+                        «Математическое компьютерное моделирование».
+                        Интересуется Python и Web-технологиями.
+                    </p>
+
+                </article>
+
+                <article class="card" data-role="designer">
+
+                    <h3>Адильхан
+
+                    <p class="role">
+                        Дизайнер
+                    </p>
+
+                    <p>
+                        Отвечает за внешний вид проекта,
+                        расположение элементов и удобство интерфейса.
+                    </p>
+
+                </article>
+
+
+                <article class="card" data-role="analyst">
+
+                    <h3>Диас
+
+                    <p class="role">
+                        Аналитик
+                    </p>
+
+                    <p>
+                        Анализирует информацию, помогает работать
+                        с данными и проверяет результаты проекта.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="page-footer">
+        <p>
+            Учебная работа по HTML, CSS и JavaScript
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Басты бет — Сайран Ерасыл</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg: #f4f7fb;
+            --card: #ffffff;
+            --text: #1f2937;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --border: #dbe3ee;
+            --muted: #64748b;
+            --radius: 16px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--card);
+            border-bottom: 3px solid var(--primary);
+            padding: 36px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0 0 10px;
+            color: var(--primary);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+        }
+
+        header p {
+            margin: 0;
+            color: var(--muted);
+        }
+
+        main {
+            width: min(1100px, 92%);
+            margin: 30px auto;
+        }
+
+        .week {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .week h2 {
+            margin-top: 0;
+            color: var(--primary-dark);
+        }
+
+        .links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 12px;
+        }
+
+        a {
+            display: block;
+            padding: 12px 14px;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            background: #f8fafc;
+            color: var(--primary-dark);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            background: #eaf2ff;
+            border-color: var(--primary);
+        }
+
+        a:focus-visible {
+            outline: 4px solid #fbbf24;
+            outline-offset: 3px;
+        }
+
+        footer {
+            margin-top: 40px;
+            padding: 22px;
+            text-align: center;
+            background: #1f2937;
+            color: white;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 28px 16px;
+            }
+
+            .week {
+                padding: 16px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .week {
+                break-inside: avoid;
+                border: 1px solid #999;
+            }
+
+            a {
+                color: black;
+                background: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Басты бет</h1>
+        <p>Сайран Ерасыл — HTML жобалары</p>
+    </header>
+
+    <main>
+
+        <section class="week">
+            <h2>1 апта</h2>
+            <div class="links">
+                <a href="1 апта WB пример.html">Пример</a>
+                <a href="1 апта WB самостоятльная.html">Самостоятельная работа</a>
+            </div>
+        </section>
+
+        <section class="week">
+            <h2>2 апта</h2>
+            <div class="links">
+                <a href="2 апта WB пример.html">Пример</a>
+                <a href="2 апта WB задание 1.html">Задание 1</a>
+                <a href="2 апта WB самостоятельная.html">Самостоятельная работа</a>
+            </div>
+        </section>
+
+        <section class="week">
+            <h2>3 апта</h2>
+            <div class="links">
+                <a href="3 апта WB пример.html">Пример</a>
+                <a href="3 апта WB задание 1.html">Задание 1</a>
+                <a href="3 апта WB задание 2.html">Задание 2</a>
+                <a href="3 апта WB самостоятельная.html">Самостоятельная работа</a>
+            </div>
+        </section>
+
+        <section class="week">
+            <h2>4 апта</h2>
+            <div class="links">
+                <a href="4 апта WB пример.html">Пример</a>
+                <a href="4 апта WB задание 1.html">Задание 1</a>
+                <a href="4 апта WB самостоятельная.html">Самостоятельная работа</a>
+            </div>
+        </section>
+
+        <section class="week">
+            <h2>5–8 апта</h2>
+            <div class="links">
+                <a href="5 week.html">5 апта</a>
+                <a href="6 week.html">6 апта</a>
+                <a href="7 week.html">7 апта</a>
+                <a href="8 week.html">8 апта</a>
+            </div>
+        </section>
+
+        <section class="week">
+            <h2>Қосымша бет</h2>
+            <div class="links">
+                <a href="family.html">Family — отбасы туралы бет</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        Сайран Ерасыл — басты бет
+    </footer>
+
+</body>
+</html>
